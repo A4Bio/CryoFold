@@ -162,5 +162,3 @@ Please submit any bug reports, feature requests, or general usage feedback as a 
 
 This project is licensed under the MIT License. See the [LICENSE file](https://github.com/A4Bio/CryoFold/blob/main/LICENSE) for details.
 
-## DOI
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14970359.svg)](https://doi.org/10.5281/zenodo.14970359)
