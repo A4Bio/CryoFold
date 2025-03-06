@@ -53,7 +53,7 @@ To get started with E3-CryoFold, follow these steps:
 
     ```bash
     conda env create -f environment.yml
-    conda activate E3-CryoFold
+    conda activate cryofold
     ```
 
 3. **Download the Pretrained Model**:
