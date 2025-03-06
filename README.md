@@ -1,6 +1,6 @@
-# CryoFold: One-shot Prediction For Cryo-EM Structure Determination
+# E3-CryoFold: One-shot Prediction For Cryo-EM Structure Determination
 
-CryoFold is a deep learning framework for automating the determination of three-dimensional atomic structures from high-resolution cryo-electron microscopy (Cryo-EM) density maps. It addresses the limitations of existing AI-based methods by providing an end-to-end solution that integrates training and inference into a single streamlined pipeline. CryoFold combines 3D and sequence Transformers for feature extraction and employs an equivariant graph neural network to build accurate atomic structures from density maps.
+E3-CryoFold is a deep learning framework for automating the determination of three-dimensional atomic structures from high-resolution cryo-electron microscopy (Cryo-EM) density maps. It addresses the limitations of existing AI-based methods by providing an end-to-end solution that integrates training and inference into a single streamlined pipeline. E3-CryoFold combines 3D and sequence Transformers for feature extraction and employs an equivariant graph neural network to build accurate atomic structures from density maps.
 
 <p align="center" width="100%">
   <img src='https://github.com/user-attachments/assets/accbe5f4-a2de-46f7-8255-8c36106770a5' width="100%">
@@ -29,7 +29,7 @@ Existing AI-based methods for automating Cryo-EM structure determination face se
 2. **Alignment bias**: Techniques such as **Hidden Markov Models (HMMs)** or **Traveling Salesman Problem (TSP) solvers** introduce bias when aligning predicted atomic coordinates with the protein sequence.
 3. **Poor generalization**: Due to the limited size of available datasets, many methods struggle to generalize well to complex or previously unseen test cases.
 
-CryoFold addresses these challenges by providing a **fully integrated, end-to-end solution** that performs **one-shot inference** with minimal manual intervention, enabling faster and more accurate structure determination.
+E3-CryoFold addresses these challenges by providing a **fully integrated, end-to-end solution** that performs **one-shot inference** with minimal manual intervention, enabling faster and more accurate structure determination.
 
 ## Features
 
@@ -40,25 +40,25 @@ For more details on the performance and benchmarking, please refer to our paper.
 
 ## Installation
 
-To get started with CryoFold, follow these steps:
+To get started with E3-CryoFold, follow these steps:
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/A4Bio/CryoFold.git
-   cd CryoFold
+   git clone https://github.com/A4Bio/E3-CryoFold.git
+   cd E3-CryoFold
    ```
 
 2. **Create and activate the conda environment**:
 
     ```bash
     conda env create -f environment.yml
-    conda activate cryofold
+    conda activate E3-CryoFold
     ```
 
 3. **Download the Pretrained Model**:
 
-    We provide a pretrained model for CryoFold. [Download it here](https://github.com/A4Bio/CryoFold/releases/download/checkpoint/checkpoint.pt) and place it in the pretrained_models directory.
+    We provide a pretrained model for E3-CryoFold. [Download it here](https://github.com/A4Bio/E3-CryoFold/releases/download/checkpoint/checkpoint.pt) and place it in the pretrained_models directory.
 
 4. **Download the Experimental dataset**:
    The training set can be downloaded in https://doi.org/10.7910/DVN/FCDG0W, and the standard test dataset can be downloaded in https://doi.org/10.7910/DVN/2GSSC9.
@@ -66,7 +66,7 @@ To get started with CryoFold, follow these steps:
 
 ## Quick Start
 
-To quickly try out CryoFold using an example dataset, run the following command:
+To quickly try out E3-CryoFold using an example dataset, run the following command:
 
 ```
 bash run_example.sh
@@ -101,7 +101,7 @@ python inference.py --density_map_path examples/density_map --pdb_path examples/
 
 ### Using Custom Data
 
-To use CryoFold with your own data, you need to provide a Cryo-EM density map and, optionally, a PDB file for evaluating the predicted structure. For example:
+To use E3-CryoFold with your own data, you need to provide a Cryo-EM density map and, optionally, a PDB file for evaluating the predicted structure. For example:
 
 ```bash
 python inference.py --density_map_path /path/to/your/density_map --pdb_path /path/to/your/ground_truth.pdb --output_dir /path/to/save/results --device cuda
@@ -120,7 +120,7 @@ After preprocessing, the directory structure should look like:
 
 The organization of the downloaded models should look like:
 ```text 
-CryoFold
+E3-CryoFold
 ├── examples
 │   ├── density_map
 │   │   ├── map.map
@@ -137,7 +137,7 @@ CryoFold
 After inference, the output will be saved in the specified output directory:
 
 ```text 
-CryoFold
+E3-CryoFold
 ├── results
 │   └── output.pdb
 ```
@@ -160,5 +160,5 @@ Please submit any bug reports, feature requests, or general usage feedback as a 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE file](https://github.com/A4Bio/CryoFold/blob/main/LICENSE) for details.
+This project is licensed under the MIT License. See the [LICENSE file](https://github.com/A4Bio/E3-CryoFold/blob/main/LICENSE) for details.
 
